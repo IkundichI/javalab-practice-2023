@@ -29,7 +29,7 @@ public class EventsRepositoryFileImpl implements EventsRepository {
         }
     }
 
-    public Event findEventBy(String string, int lineNumber) {
+    private Event findEventBy(String string, int lineNumber) { 
         try (BufferedReader reader = new BufferedReader(new FileReader(eventFileName))) {
             String line;
             while ((line = reader.readLine()) != null) {
